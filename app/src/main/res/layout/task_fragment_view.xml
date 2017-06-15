@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <android.support.v7.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_marginTop="@dimen/dp_10"
+      android:layout_marginLeft="@dimen/activity_horizontal_margin"
+       android:layout_marginRight="@dimen/activity_horizontal_margin"
+      android:layout_height="wrap_content">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/cardview_background"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="Task Statement :"
+        android:textColor="@color/tagColor"
+        android:textSize="@dimen/Tag_Size"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskStatement_fragment"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:textSize="18dp"
+        android:text="Current Statement"
+        android:layout_marginTop="@dimen/minimum"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/minimum"
+            android:text="Status :"
+            android:textColor="@color/tagColor"
+            android:textSize="@dimen/Tag_Size"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:id="@+id/frag_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="@string/radio_pending"
+            android:layout_marginTop="@dimen/minimum"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="Details/Reason:"
+        android:textColor="@color/tagColor"
+        android:textSize="@dimen/Tag_Size"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/detail_fragment"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:textSize="18dp"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        />
+
+
+</LinearLayout>
+  </android.support.v7.widget.CardView>
+</ScrollView>

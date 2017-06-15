@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DeleteNotification">
+
+    <item
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/delete_notification"
+        android:orderInCategory="100"
+        android:title="delete"
+        android:icon="@drawable/delete_icon"
+        app:showAsAction="always" />
+
+</menu>

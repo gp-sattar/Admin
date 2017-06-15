@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.grampower.admin.EmployeeAttendanceCheck">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbarBackColor"
+            android:layout_gravity="bottom"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:popupTheme="@style/AppTheme.PopupOverlay"
+            android:weightSum="1">
+
+            <ImageButton
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:id="@+id/backAttendanceCheck"
+                android:background="@color/toolbarBackColor"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_height="@dimen/toolbar_profile_diameter"
+                android:layout_width="@dimen/toolbar_profile_diameter"
+                android:id="@+id/profile_attendance_check"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:id="@+id/employeeName_attendanceCheck"
+                android:layout_marginLeft="@dimen/minimum"
+                android:textSize="@dimen/employeeName_size"/>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/AttendanceScreen"
+
+        android:layout_marginTop="@dimen/recycler_margin_top">
+
+        <ProgressBar
+            android:id="@+id/toolbar_progress_bar_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="#795548"
+            android:indeterminateTintMode="src_in"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:orientation="vertical"
+            android:id="@+id/wholeDayAttendance"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/morningAttendance">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tag"
+                 android:layout_centerHorizontal="true"
+                 android:textColor="@color/toolbarBackColor"
+                android:textSize="25dp"
+                 android:text="Morning Attendance"
+                />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/selfieStartAttendance"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tag"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/bg_4"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timeStartAttendance"
+                android:layout_below="@+id/tag"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_toRightOf="@+id/selfieStartAttendance"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/dp_20"
+                android:textSize="20dp"
+                android:text="11:20:30 AM"
+                />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_below="@+id/timeStartAttendance"
+                android:background="#c0c0c0"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/locationStartAttendance"
+                android:layout_below="@+id/timeStartAttendance"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_toRightOf="@+id/selfieStartAttendance"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/dp_20"
+                android:textSize="12dp"
+                android:text="Gram Power,Vaishali Marg, Vaishali Nagar, Jaipur,Rajathan,India "
+                />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/eveningAttendance"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tagEnd"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/toolbarBackColor"
+                        android:textSize="25dp"
+                        android:text="Evening Attendance"
+                        />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/selfieEndAttendance"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tagEnd"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/bg_4"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/timeEndAttendance"
+                        android:layout_below="@+id/tagEnd"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_toRightOf="@+id/selfieEndAttendance"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:textSize="20dp"
+                        android:text="Absent"
+                        />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_30"
+                        android:layout_below="@+id/timeEndAttendance"
+                        android:background="#c0c0c0"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/locationEndAttendance"
+                        android:layout_below="@+id/timeEndAttendance"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_toRightOf="@+id/selfieEndAttendance"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:textSize="12dp"
+
+                        />
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
